@@ -1,9 +1,9 @@
 package com.camlait.global.erp.dao.document.stock.entree;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.document.stock.entree.BonEntree;
 
-public interface BonEntreeDao extends CrudRepository<BonEntree, Long> {
+public interface BonEntreeDao extends JpaRepository<BonEntree, Long> {
 
 }

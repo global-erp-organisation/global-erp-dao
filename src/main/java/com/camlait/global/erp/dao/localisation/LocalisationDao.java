@@ -1,9 +1,9 @@
 package com.camlait.global.erp.dao.localisation;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.localisation.Localisation;
 
-public interface LocalisationDao extends CrudRepository<Localisation, Long> {
+public interface LocalisationDao extends JpaRepository<Localisation, Long> {
 
 }
