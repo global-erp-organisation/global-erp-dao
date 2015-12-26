@@ -1,8 +1,8 @@
-package com.camlait.global.erp.dao.taxe;
+package com.camlait.global.erp.dao.document.comerciaux;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.camlait.global.erp.domain.taxe.Taxe;
+import com.camlait.global.erp.domain.document.commerciaux.Taxe;
 
 public interface TaxeDao extends JpaRepository<Taxe, Long> {
 
