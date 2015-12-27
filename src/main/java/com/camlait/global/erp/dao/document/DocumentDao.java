@@ -12,7 +12,7 @@ import com.camlait.global.erp.domain.document.Document;
 
 public interface DocumentDao extends JpaRepository<Document, Long> {
 
-	@Query(value="from Document b where (d.dateDocument>=?1 and d.dateDocument<=?2)")
+	@Query(value="from Document d where (d.dateDocument>=?1 and d.dateDocument<=?2)")
 	Page<Document> listerDocument(Date debut, Date fin, Pageable p);
 	
 }

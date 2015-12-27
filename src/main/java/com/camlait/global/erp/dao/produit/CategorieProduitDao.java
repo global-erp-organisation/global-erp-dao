@@ -14,4 +14,6 @@ public interface CategorieProduitDao extends JpaRepository<CategorieProduit, Lon
 	@Query(value = "from CategorieProduit c where c.categorieParent.categorieProduitId=?1")
 	Page<CategorieProduit> listerCategorie(Long parentId, Pageable p);
 
+	@Query(value = "from CategorieProduit c where(c.codeCategorieProduit like %?1%)or (c.descriptionCategorie like %?1%)")
+	Page<CategorieProduit> listerCategorieProduit(String motCle, Pageable p);
 }
