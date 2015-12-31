@@ -17,4 +17,6 @@ public interface DocumentDao extends JpaRepository<Document, Long> {
     
     @Query(value = "Select d From Document d where d.typeDocument=?1 order by d.codeDocument desc")
     Page<Document> obtenirDernierDocument(EnumTypeEntite type,Pageable p);
+    
+    Page<Document> findByCodeDocument(String codeDocument,Pageable p);
 }

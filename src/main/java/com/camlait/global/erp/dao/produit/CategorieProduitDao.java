@@ -2,6 +2,8 @@ package com.camlait.global.erp.dao.produit;
 
 import java.util.Collection;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -16,4 +18,6 @@ public interface CategorieProduitDao extends JpaRepository<CategorieProduit, Lon
 
 	@Query(value = "from CategorieProduit c where(c.codeCategorieProduit like %?1%)or (c.descriptionCategorie like %?1%)")
 	Collection<CategorieProduit> listerCategorieProduit(String motCle);
+	
+	Page<CategorieProduit> findBycodeCategorieProduit(String codeCategorieProduit,Pageable p);
 }

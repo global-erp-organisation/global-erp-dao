@@ -21,4 +21,6 @@ public interface MagasinDao extends JpaRepository<Magasin, Long> {
     @Query(value="from Magasin m where m.typeMagasin=?1 order by m.codeMagasin")
     Page<Magasin> obtenirDernierMagasin(EnumTypeEntite type, Pageable p);
     
+    Page<Magasin> findByCodeMagasin(String codeMagasin,Pageable p);
+    
 }

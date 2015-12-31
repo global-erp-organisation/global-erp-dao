@@ -20,4 +20,6 @@ public interface InventaireDao extends JpaRepository<Inventaire, Long> {
     @Query(value = "select i from Inventaire i order by i.codeInventaire")
     Page<Inventaire> obtenirDernierInventaire(Pageable p);
     
+    Page<Inventaire> findByCodeInventaire(String codeInventaire,Pageable p);
+    
 }

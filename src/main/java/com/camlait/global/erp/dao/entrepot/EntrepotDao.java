@@ -8,7 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 import com.camlait.global.erp.domain.entrepot.Entrepot;
 
 public interface EntrepotDao extends JpaRepository<Entrepot, Long> {
-
-    @Query(value="select e from Entrepot e order by e.codeEntrepot")
+    
+    @Query(value = "select e from Entrepot e order by e.codeEntrepot")
     Page<Entrepot> obtenirDernierEntrepot(Pageable p);
+    
+    Page<Entrepot> findByCodeEntrepot(String codeEntrepot,Pageable p);
+    Entrepot findByCodeEntrepot(String codeEntrepot);
 }

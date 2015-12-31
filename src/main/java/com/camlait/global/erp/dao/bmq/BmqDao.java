@@ -22,4 +22,6 @@ public interface BmqDao extends JpaRepository<Bmq, Long> {
     
     @Query(value = "select b.codeBmq from Bmq b order by b.codeBmq desc")
     Page<Bmq> obtenirDernierBmq(Pageable p);
+    
+    Page<Bmq> findByCodeBmq(String codeBmq,Pageable p);
 }
