@@ -1,6 +1,7 @@
 package com.camlait.global.erp.dao.produit;
 
 import java.util.Collection;
+import java.util.Set;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +15,7 @@ import com.camlait.global.erp.domain.produit.Produit;
 public interface ProduitDao extends JpaRepository<Produit, Long> {
     
     @Query(value = "from Produit p where p.categorie.categorieProduitId=?1")
-    Collection<Produit> listerProduit(Long categorieId);
+    Set<Produit> listerProduit(Long categorieId);
     
     @Query(value = "from Produit p where (p.codeProduit like %?1%) or (p.descriptionProduit like %?1%)")
     Collection<Produit> listerProduit(String motCle);
