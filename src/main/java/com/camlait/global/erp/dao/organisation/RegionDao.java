@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.camlait.global.erp.domain.organisation.Region;
 
-public interface RegionDao extends JpaRepository<Region, Long> {
+public interface RegionDao extends JpaRepository<Region, String> {
     
     @Query(value = "From Region r where r.centre.localId=?1")
     Collection<Region> listerRegion(Long localId);    

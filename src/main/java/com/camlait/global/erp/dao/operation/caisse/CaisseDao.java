@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.operation.caisse.Caisse;
 
-public interface CaisseDao extends JpaRepository<Caisse, Long> {
+public interface CaisseDao extends JpaRepository<Caisse, String> {
     
     Page<Caisse> findByCodeCaisse(String codeCaisse,Pageable p);
 }

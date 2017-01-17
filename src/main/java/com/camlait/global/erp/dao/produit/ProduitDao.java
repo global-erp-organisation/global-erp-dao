@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.camlait.global.erp.domain.produit.Produit;
 
 @Repository
-public interface ProduitDao extends JpaRepository<Produit, Long> {
+public interface ProduitDao extends JpaRepository<Produit, String> {
     
     @Query(value = "from Produit p where p.categorie.categorieProduitId=?1")
     Set<Produit> listerProduit(Long categorieId);

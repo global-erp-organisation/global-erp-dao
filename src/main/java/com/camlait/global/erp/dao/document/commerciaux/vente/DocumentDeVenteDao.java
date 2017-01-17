@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.camlait.global.erp.domain.document.commerciaux.vente.DocumentDeVente;
 
-public interface DocumentDeVenteDao extends CrudRepository<DocumentDeVente, Long> {
+public interface DocumentDeVenteDao extends CrudRepository<DocumentDeVente, String> {
 
 }

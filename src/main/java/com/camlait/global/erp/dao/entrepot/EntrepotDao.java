@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.camlait.global.erp.domain.entrepot.Entrepot;
 
-public interface EntrepotDao extends JpaRepository<Entrepot, Long> {
+public interface EntrepotDao extends JpaRepository<Entrepot, String> {
     
     @Query(value = "select e from Entrepot e order by e.codeEntrepot")
     Page<Entrepot> obtenirDernierEntrepot(Pageable p);

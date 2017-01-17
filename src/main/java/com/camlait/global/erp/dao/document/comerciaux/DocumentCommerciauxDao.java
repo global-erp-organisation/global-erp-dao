@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.document.commerciaux.DocumentCommerciaux;
 
-public interface DocumentCommerciauxDao extends JpaRepository<DocumentCommerciaux, Long> {
+public interface DocumentCommerciauxDao extends JpaRepository<DocumentCommerciaux, String> {
 
 }

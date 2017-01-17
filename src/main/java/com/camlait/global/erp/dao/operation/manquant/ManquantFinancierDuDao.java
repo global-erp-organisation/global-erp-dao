@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.operation.manquant.ManquantFinancierDu;
 
-public interface ManquantFinancierDuDao extends JpaRepository<ManquantFinancierDu, Long> {
+public interface ManquantFinancierDuDao extends JpaRepository<ManquantFinancierDu, String> {
 
 }

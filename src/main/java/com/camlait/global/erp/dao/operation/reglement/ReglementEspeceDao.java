@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.operation.reglement.ReglementEspece;
 
-public interface ReglementEspeceDao extends JpaRepository<ReglementEspece, Long> {
+public interface ReglementEspeceDao extends JpaRepository<ReglementEspece, String> {
 
 }

@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.operation.Recouvrement;
 
-public interface RecouvrementDao extends JpaRepository<Recouvrement, Long> {
+public interface RecouvrementDao extends JpaRepository<Recouvrement, String> {
 
 }

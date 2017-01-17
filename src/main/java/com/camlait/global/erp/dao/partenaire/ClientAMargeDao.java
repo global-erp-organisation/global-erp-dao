@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.partenaire.ClientAmarge;
 
-public interface ClientAMargeDao extends JpaRepository<ClientAmarge, Long> {
+public interface ClientAMargeDao extends JpaRepository<ClientAmarge, String> {
 
 }

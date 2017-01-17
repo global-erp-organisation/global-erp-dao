@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.camlait.global.erp.domain.produit.CategorieProduit;
 
 @Repository
-public interface CategorieProduitDao extends JpaRepository<CategorieProduit, Long> {
+public interface CategorieProduitDao extends JpaRepository<CategorieProduit, String> {
 
 	@Query(value = "from CategorieProduit c where c.categorieParent.categorieProduitId=?1")
 	Collection<CategorieProduit> listerCategorie(Long parentId);

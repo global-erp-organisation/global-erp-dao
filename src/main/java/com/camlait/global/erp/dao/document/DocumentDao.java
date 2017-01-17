@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.camlait.global.erp.domain.document.Document;
 import com.camlait.global.erp.domain.enumeration.EnumTypeEntite;
 
-public interface DocumentDao extends JpaRepository<Document, Long> {
+public interface DocumentDao extends JpaRepository<Document, String> {
     
     @Query(value = "from Document d where (d.dateDocument>=?1 and d.dateDocument<=?2)")
     Page<Document> listerDocument(Date debut, Date fin, Pageable p);

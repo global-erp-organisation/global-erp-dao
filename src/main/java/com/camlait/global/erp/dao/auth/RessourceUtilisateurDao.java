@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.auth.RessourceUtilisateur;
 
-public interface RessourceUtilisateurDao extends JpaRepository<RessourceUtilisateur, Long> {
+public interface RessourceUtilisateurDao extends JpaRepository<RessourceUtilisateur, String> {
 
 }

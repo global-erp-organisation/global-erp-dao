@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.bmq.LigneBmq;
 
-public interface LigneBmqDao extends JpaRepository<LigneBmq, Long> {
+public interface LigneBmqDao extends JpaRepository<LigneBmq, String> {
 
 }

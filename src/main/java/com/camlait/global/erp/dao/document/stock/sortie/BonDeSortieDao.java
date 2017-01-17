@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.document.stock.sortie.BonDeSortie;
 
-public interface BonDeSortieDao extends JpaRepository<BonDeSortie, Long> {
+public interface BonDeSortieDao extends JpaRepository<BonDeSortie, String> {
 
 }

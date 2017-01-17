@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.document.LigneDeDocumentTaxe;
 
-public interface LigneDeDocumentTaxeDao extends JpaRepository<LigneDeDocumentTaxe, Long> {
+public interface LigneDeDocumentTaxeDao extends JpaRepository<LigneDeDocumentTaxe, String> {
 
 }

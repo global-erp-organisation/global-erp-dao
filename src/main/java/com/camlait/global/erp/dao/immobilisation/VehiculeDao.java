@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.immobilisation.Vehicule;
 
-public interface VehiculeDao extends JpaRepository<Vehicule, Long> {
+public interface VehiculeDao extends JpaRepository<Vehicule, String> {
     
     Page<Vehicule> findByImmatriculation(String immatriculation,Pageable p);
 }

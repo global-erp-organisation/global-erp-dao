@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.camlait.global.erp.domain.enumeration.EnumTypeEntite;
 import com.camlait.global.erp.domain.partenaire.Partenaire;
 
-public interface PartenaireDao extends JpaRepository<Partenaire, Long>{
+public interface PartenaireDao extends JpaRepository<Partenaire, String>{
     
     @Query(value = "select p from Partenaire p where p.typePartenaire=?1 order by p.codePartenaire desc")
     Page<Partenaire> obtenirDernierPartenaire(EnumTypeEntite type, Pageable p);

@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.operation.reglement.ReglementParCheque;
 
-public interface ReglementParChequeDao extends JpaRepository<ReglementParCheque, Long> {
+public interface ReglementParChequeDao extends JpaRepository<ReglementParCheque, String> {
 
 }

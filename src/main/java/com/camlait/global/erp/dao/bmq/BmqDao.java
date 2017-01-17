@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.camlait.global.erp.domain.bmq.Bmq;
 
-public interface BmqDao extends JpaRepository<Bmq, Long> {
+public interface BmqDao extends JpaRepository<Bmq, String> {
 
 	@Query(value = "from Bmq b where b.vendeur.partenaireId=?1")
 	Page<Bmq> listerBmq(Long vendeurId, Pageable p);

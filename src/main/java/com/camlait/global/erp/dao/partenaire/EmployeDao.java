@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.camlait.global.erp.domain.partenaire.Employe;
 
-public interface EmployeDao extends JpaRepository<Employe, Long> {
+public interface EmployeDao extends JpaRepository<Employe, String> {
     
     @Query(value = "From Employe e where (e.nom like %?1) or ((e.prenom like %?1)or (e.matricule like %?1)or (e.codePartenaire like %?1))")
     Page<Employe> listerEmploye(String motCle, Pageable p);

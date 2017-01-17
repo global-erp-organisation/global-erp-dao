@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.immobilisation.Immobilisation;
 
-public interface ImmobilisationDao extends JpaRepository<Immobilisation, Long> {
+public interface ImmobilisationDao extends JpaRepository<Immobilisation, String> {
     
     Page<Immobilisation> findByCodeImmo(String codeImmo, Pageable p);
 }

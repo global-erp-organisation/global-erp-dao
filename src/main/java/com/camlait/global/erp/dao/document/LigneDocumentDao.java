@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.document.LigneDeDocument;
 
-public interface LigneDocumentDao extends JpaRepository<LigneDeDocument, Long> {
+public interface LigneDocumentDao extends JpaRepository<LigneDeDocument, String> {
 
 }

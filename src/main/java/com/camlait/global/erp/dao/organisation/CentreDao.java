@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.organisation.Centre;
 
-public interface CentreDao extends JpaRepository<Centre, Long> {
+public interface CentreDao extends JpaRepository<Centre, String> {
 
 }

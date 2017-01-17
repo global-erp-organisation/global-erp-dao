@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.camlait.global.erp.domain.entrepot.Magasin;
 import com.camlait.global.erp.domain.enumeration.EnumTypeEntite;
 
-public interface MagasinDao extends JpaRepository<Magasin, Long> {
+public interface MagasinDao extends JpaRepository<Magasin, String> {
     
     @Query(value = "from Magasin m where m.entrepot.entrepotId=?1")
     Collection<Magasin> listerMagasin(Long entrepotId);

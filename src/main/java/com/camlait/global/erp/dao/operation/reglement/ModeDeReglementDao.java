@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.operation.reglement.ModeDeReglement;
 
-public interface ModeDeReglementDao extends JpaRepository<ModeDeReglement, Long> {
+public interface ModeDeReglementDao extends JpaRepository<ModeDeReglement, String> {
 
     Page<ModeDeReglement> findByCodeModeReglement(String code,Pageable p);
 }

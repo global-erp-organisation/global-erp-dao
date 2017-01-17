@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.camlait.global.erp.domain.inventaire.Stock;
 
-public interface StockDao extends JpaRepository<Stock, Long> {
+public interface StockDao extends JpaRepository<Stock, String> {
 
 	@Query(value = "From Stock s where s.magasin.magasinId=?1 and s.produit.produitId=?2")
 	Stock obtenirStock(Long magasinId, Long produitId);

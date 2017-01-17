@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.operation.marge.MargeClient;
 
-public interface MargeClientDao extends JpaRepository<MargeClient, Long> {
+public interface MargeClientDao extends JpaRepository<MargeClient, String> {
 
 }

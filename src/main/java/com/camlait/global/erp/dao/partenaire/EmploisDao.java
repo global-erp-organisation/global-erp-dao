@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.camlait.global.erp.domain.partenaire.Emplois;
 
-public interface EmploisDao extends JpaRepository<Emplois, Long> {
+public interface EmploisDao extends JpaRepository<Emplois, String> {
     
     Page<Emplois> findByCodeEmplois(String codeEmplois, Pageable p);
 }
