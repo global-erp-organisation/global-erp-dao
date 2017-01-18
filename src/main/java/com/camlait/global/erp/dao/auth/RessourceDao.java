@@ -4,7 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.camlait.global.erp.domain.auth.Ressource;
+import com.camlait.global.erp.domain.auth.user.Ressource;
 
 public interface RessourceDao extends JpaRepository<Ressource, String> {
 
