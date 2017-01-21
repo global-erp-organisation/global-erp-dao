@@ -1,8 +1,8 @@
-package com.camlait.global.erp.dao.prix;
+package com.camlait.global.erp.dao.tarif;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.camlait.global.erp.domain.prix.Tarif;
+import com.camlait.global.erp.domain.tarif.Tarif;
 
 public interface TarifDao extends JpaRepository<Tarif, String> {
 

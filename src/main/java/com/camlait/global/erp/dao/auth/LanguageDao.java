@@ -2,7 +2,7 @@ package com.camlait.global.erp.dao.auth;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.camlait.global.erp.domain.auth.ressource.Langue;
+import com.camlait.global.erp.domain.traduction.Langue;
 
 public interface LanguageDao extends JpaRepository<Langue, String> {
 

@@ -1,11 +1,11 @@
-package com.camlait.global.erp.dao.organisation;
+package com.camlait.global.erp.dao.localisation;
 
 import java.util.Collection;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.camlait.global.erp.domain.organisation.Region;
+import com.camlait.global.erp.domain.localisation.Region;
 
 public interface RegionDao extends JpaRepository<Region, String> {
     

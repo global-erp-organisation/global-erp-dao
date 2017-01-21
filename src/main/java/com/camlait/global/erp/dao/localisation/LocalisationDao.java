@@ -1,4 +1,4 @@
-package com.camlait.global.erp.dao.organisation;
+package com.camlait.global.erp.dao.localisation;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.camlait.global.erp.domain.enumeration.EnumTypeEntite;
-import com.camlait.global.erp.domain.organisation.Localisation;
+import com.camlait.global.erp.domain.localisation.Localisation;
 
 public interface LocalisationDao extends JpaRepository<Localisation, String>{
     
