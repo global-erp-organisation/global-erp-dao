@@ -1,4 +1,4 @@
-package asset;
+package com.camlait.global.erp.dao.asset;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
