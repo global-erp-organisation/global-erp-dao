@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.camlait.global.erp.domain.product.ProductCategory;
 
 @Repository
-public interface ProductCategoryDao extends JpaRepository<ProductCategory, String> {
+public interface ProductCategoryRepository extends JpaRepository<ProductCategory, String> {
 
     @Query(value = "from ProductCategory c where(c.codeCategorieProduit like %?1%)or (c.descriptionCategorie like %?1%)")
     Page<ProductCategory> retriveProductCategories(String keyWord, Pageable p);
