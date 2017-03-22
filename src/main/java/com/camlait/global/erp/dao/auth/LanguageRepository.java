@@ -12,5 +12,5 @@ public interface LanguageRepository extends JpaRepository<Language, String> {
     Language findByCodeLangue(String codeLangue);
 
     @Query(value = "from Language l where l.langId like %?1% or l.codeLangue like %?1% or l.title like %?1% or l.alt like %?1%")
-    Page<Language> RetrieveLanguages(String keyWord, Pageable p);
+    Page<Language> retrieveLanguages(String keyWord, Pageable p);
 }
