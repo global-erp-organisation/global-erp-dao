@@ -8,5 +8,5 @@ import com.camlait.global.erp.domain.auth.User;
 
 public interface UserRepository extends JpaRepository<User, String> {
 
-	Page<User> findUtilisateurByCourriel(String courriel, Pageable p);
+	Page<User> findUtilisateurByEmail(String email, Pageable p);
 }

@@ -11,6 +11,6 @@ import com.camlait.global.erp.domain.product.ProductCategory;
 @Repository
 public interface ProductCategoryRepository extends JpaRepository<ProductCategory, String> {
 
-    @Query(value = "from ProductCategory c where(c.codeCategorieProduit like %?1%)or (c.descriptionCategorie like %?1%)")
+    @Query(value = "from ProductCategory c where(c.productCategoryCode like %?1%)or (c.categoryDescription like %?1%)")
     Page<ProductCategory> retriveProductCategories(String keyWord, Pageable p);
 }

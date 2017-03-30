@@ -12,13 +12,13 @@ import com.camlait.global.erp.domain.exception.DataStorageException;
 
 public interface DocumentRepository extends JpaRepository<Document, String> {
 
-	@Query(value = "from Document d where (d.dateDocument>=?1 and d.dateDocument<=?2)")
-	Page<Document> retrieveDocuments(Date start, Date end, Pageable p);
+    @Query(value = "from Document d where (d.documentDate>=?1 and d.documentDate<=?2)")
+    Page<Document> retrieveDocuments(Date start, Date end, Pageable p);
 
-	@Query(value = "from Document d where d.documentId like %?1% or d.dateDocument like %?1% "
-			+ "or d.magasin.magasinId like %?1% or d.magasin.descriptionMagasin like %?1% or d.responsableDocument.partenaireId like %?1% "
-			+ "or d.responsableDocument.nom like %?1% or d.responsableDocument.prenom like %?1% or d.inventaire.inventaireId like %?1% "
-			+ "or d.inventaire.dateInventaire like %?1% or d.typeDocument like %?1% or d.bmq.bmqId like %?1% or d.bmq.vendeur.partenaireId like %?1% "
-			+ "order by dateDocument, documentId desc")
-	Page<Document> retrieveDocuments(String keyWord, Pageable p) throws DataStorageException;
+    @Query(value = "from Document d where d.documentId like %?1% or d.documentDate like %?1% "
+            + "or d.store.storeId like %?1% or d.store.storeDescription like %?1% or d.documentWorker.partnerId like %?1% "
+            + "or d.documentWorker.lastName like %?1% or d.documentWorker.firstname like %?1% or d.inventory.inventoryId like %?1% "
+            + "or d.inventory.inventoryDate like %?1% or d.documentType like %?1% or d.dailyMovement.dmId like %?1% or d.dailyMovement.seller.partnerId like %?1% "
+            + "order by documentDate, documentId desc")
+    Page<Document> retrieveDocuments(String keyWord, Pageable p) throws DataStorageException;
 }

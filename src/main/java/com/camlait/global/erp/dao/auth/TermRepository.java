@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 import com.camlait.global.erp.domain.translation.Term;
 
 public interface TermRepository extends JpaRepository<Term, String> {
-    @Query(value = "from Term t where t.termeId like %?1% or t.descriptionTerme like %?1%")
+    @Query(value = "from Term t where t.termId like %?1% or t.termDescription like %?1%")
     Page<Term> retrieveTerms(String keyWord, Pageable p);
 }
