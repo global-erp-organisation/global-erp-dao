@@ -13,4 +13,12 @@ public interface ProductCategoryRepository extends JpaRepository<ProductCategory
 
     @Query(value = "from ProductCategory c where(c.productCategoryCode like %?1%)or (c.categoryDescription like %?1%)")
     Page<ProductCategory> retriveProductCategories(String keyWord, Pageable p);
+
+    /**
+     * Retrieve a product category by code.
+     * 
+     * @param categoryCode
+     * @return
+     */
+    ProductCategory findOneProductCategoryByProductCategoryCode(String categoryCode);
 }
